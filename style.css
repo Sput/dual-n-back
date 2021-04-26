@@ -1,0 +1,26 @@
+
+
+table tr td {
+    border: 5px solid black;
+}
+
+.active {
+    background-color: darkblue;
+}
+
+.inactive {
+    background-color: darkmagenta;
+}
+
+td {
+    vertical-align: middle;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    background-color: coral;
+}
+
+td div {
+    background-color: darkblue;
+}
+

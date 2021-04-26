@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="instructions">
+        <h1>N Back Test</h1>
+        <p>The squares below will flash one at a time. Your objective is to press the spacebar when a square flashes that also flashed N number of squares in the past.</p>
+    </div>
+    <div id="num_back">
+        <p>How many squares back to remember:</p>
+        <input type="number" id="num_back">
+    </div>
+    <div id="num_btn">
+        <button type="button" id="begin">Begin</button>
+    </div>
+    <table>
+        <tr>
+            <td id="top_left"  class="inactive"></td>
+            <td id="top_center" class="inactive"></td>
+            <td id="top_right" class="active"></td>
+        </tr>
+        <tr>
+            <td id="center_left" class="inactive"></td>
+            <td id="center_center" class="inactive"></td>
+            <td id="center_right" class="inactive"></td>
+        </tr>
+        <tr>
+            <td id="bottom_left" class="inactive"></td>
+            <td id="bottom_center" class="inactive"></td>
+            <td id="bottom_right" class="inactive"></td>
+        </tr>
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
