@@ -10,9 +10,9 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. I was able to get basics of HTML and CSS done in the morning. In the afternoon I started working on javascript. I was able to make some good progress before getting stuck on changing colors of blocks based on random numbers. 
+2. I'm going to move random number generator into a seperate function that can be used from different functions. In gnereal this morning I'm going to put everything into it's own function, in order to clean up my code. 
+3. Having trouble changing colors of blocks, Paula and Evan gave me some vectors to try to work around it. 
 
 # Tuesday
 - [x] What did you achieve yesterday?
