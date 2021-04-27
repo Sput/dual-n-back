@@ -37,6 +37,21 @@ function Light_up_new_block(){
     return past_blocks;
 }
 
+//Function to create a random number and return it
+function getRandomNumber(){
+    new_block = Math.floor(Math.random()*9);
+    return new_block;
+}
+
+//Function to take in button push
+function buttonPressed(e)
+
+//Function to update score data
+
+//Function to update the game stage (how many blocks have been shown)
+
+//Update score and game state on the screen
+
 
 
 
@@ -44,6 +59,7 @@ document.getElementById("begin").onclick = function(){
     //Light up a new block
     //console.log(Math.floor(Math.random()*9));
     console.log("begin button pressed");
+    document.addEventListener("keypress", buttonPressed)
     Light_up_new_block();
     console.log(past_blocks)
 };
