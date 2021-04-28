@@ -1,28 +1,35 @@
 //define variables to get started with
 
-let buttons = $(".button"); 
+let button = document.querySelector("#start")
+let buttons = document.querySelectorAll(".button")
 let computer_gives = [];
 let user_input = []
 
-function Light_up_new_block() {
-    button.addClass("lightup");
+function Light_up_new_block(button_gives) {
+    console.log("Light up new block")
+    
+    buttons[button_gives].classList.add("lightup");
     setTimeout(function()    {
-        button.removeClass("lightup");
+        buttons[button_gives].classList.remove("lightup");
     }, 500);
 }
 
+//div.classList.remove("foo");
+//div.classList.add("anotherclass");
+
 function beginGame() {
-    computer_gives = []
-    enableReset();
-    disableStart();
+    console.log("begin game")
+    //enableReset();
+    //disableStart();
     computer_action();
 }
 
 function play_state_computer_array() {
-    disableClick();
+    //disableClick();
+    console.log("play_state_computer array")
     let i = 0;
     let intervalId = setInterval(() => {
-        Light_up_new_block($("#" + computer_gives[i]));
+        Light_up_new_block(computer_gives[i]);
         i++
         if (i>= computer_gives.length) {
             clearInterval(intervalId);
@@ -33,6 +40,7 @@ function play_state_computer_array() {
 
 //computer decides on action and executes move
 function computer_action() {
+    console.log("computer action")
     user_input = [];
     current_score();
     getRandomNumber();
@@ -43,34 +51,39 @@ function computer_action() {
 //user makes a selection 
 //++note to self, update this in HTML with numbers
 function enableClick()    {
-    $("#0").on("click", userInput);
-    $("#1").on("click", userInput);
-    $("#2").on("click", userInput);
-    $("#3").on("click", userInput);
-    $("#4").on("click", userInput);
-    $("#5").on("click", userInput);
-    $("#6").on("click", userInput);
-    $("#7").on("click", userInput);
-    $("#8").on("click", userInput);
+    console.log("enable Click")
+    document.getElementById("0").addEventListener("click", userInput);
+    document.getElementById("1").addEventListener("click", userInput);
+    document.getElementById("2").addEventListener("click", userInput);
+    document.getElementById("3").addEventListener("click", userInput);
+    document.getElementById("4").addEventListener("click", userInput);
+    document.getElementById("5").addEventListener("click", userInput);
+    document.getElementById("6").addEventListener("click", userInput);
+    document.getElementById("7").addEventListener("click", userInput);
+    document.getElementById("8").addEventListener("click", userInput);
 }
-
+//button.addClass("lightu
 //User pushes a button it SHOULD light up
 function userInput() {
-    Light_up_new_block($(this));
+    console.log("user input")
+    console.log(this.id)
+    Light_up_new_block(this.id);
     user_input.push(this.id);
     compareArrays();
 }
 
 //Function to create a random number and return it
 function getRandomNumber(){
+    console.log("get random number")
     new_block = Math.floor(Math.random()*9);
-    let buttonActivated = buttons[random];
-    computer_gives.push(buttonActivated.id);
+    //let buttonActivated = buttons[random]; I removed the definiton of this array, so removing this too
+    computer_gives.push(new_block);
     return;
 }
 
 //compare user input with computer array, if they match we continue, if not its game over
 function compareArrays() {
+    console.log("compare arrays")
     for (let i = 0; i < user_input.length; i++)    {
         if (computer_gives[i] != user_input[i])    {
             gameOver();
@@ -84,43 +97,34 @@ function compareArrays() {
 
 //when game resets gives an action
 function resetGame() {
+    console.log("reset game")
     console.log(computer_gives.length);
 }
 
-//user clicks button, should be disabled while computer is flashing lights
-function enableClick() {
-    $("#0").on("click", userInput);
-    $("#1").on("click", userInput);
-    $("#2").on("click", userInput);
-    $("#3").on("click", userInput);
-    $("#4").on("click", userInput);
-    $("#5").on("click", userInput);
-    $("#6").on("click", userInput);
-    $("#7").on("click", userInput);
-    $("#8").on("click", userInput);
-}
 
 //called when compareArrays doesn't match
 function gameOver() {
+    console.log("game over")
     setTimeout(() => {
         let show_score = confirm("your score was " + computer_gives.length)
     }, 1000);
 }
-
+/* COME BACK TO THIS LATER, NOT URGENT TO GET THE GAME RUNNING
 //user cant click while computer is flashing
-function disableClick() {
-    $(".button").off("click");
+function() {
+    document.getElementById("button").disabled = true;
 }
 
 
 //cant start game once game is started
 function disableStart() {
-    $("start").off("click");
-}
+    document.getElementById("start").disabled = true;
+}*/
 
+/*
 function enableReset() {
-    $("#reset").on("click", resetGame);
-}
+    document.getElementById("reset").addEventListener("click", resetstartGame);
+}  removed temporarily, add back in if I add the reset button*/ 
 
 //Function to take in button push, should not need this anymore, keeping just in case
 /*function buttonPressed(computer_gives, new_block, num_back) {
@@ -143,15 +147,16 @@ function enableReset() {
 //Function to update the game stage (how many blocks have been shown) 
 //right now this is not a function, not sure if I need to make it one, right now it makes sense
 //to just have one line that reads: rounds_left = rounds_left--;
-
-//Update score and game state on the screen
+start
+//Update score and game state onuser_score
 function current_score() {
+    console.log("current score")
     /*let score = document.getElementById("current_score");
     score.innerHTML = current_score; I think I don't need this anymore*/
-    $("#screen").text(computer_gives.length);
+    document.getElementById("user_score").innerHTML = computer_gives.length;
     return;
 }
-
+/*
 
 document.getElementById("begin").onclick = function(){
     //Light up a new block
@@ -164,11 +169,11 @@ document.getElementById("begin").onclick = function(){
     userGuess = document.getElementById("match_btn").addEventListener("click", buttonPressed(computer_gives, new_block, num_back))
     current_score = updateScore(userGuess, current_score);
     rounds_left = rounds_left--;
-    updatestoScreen(current_score);
+    updauser_score(current_score);
     Light_up_new_block();
     console.log(computer_gives)
-};
+}; */
 
 
 //when start is clicked game starts
-$("#start").on("click", beginGame);
+document.getElementById("start").addEventListener("click", beginGame);
