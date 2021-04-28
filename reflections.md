@@ -18,9 +18,9 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. I got all the functions written, but none connectect to the main execution. Also decided I was getting too fancy with scoring, so I de-scoped a bit, making it more like real Simon. 
+2. I need to now wire everything up and make it work as an application. Also implement changes from descoping. 
+3. None right now. 
 
 # Wednesday
 - [x] What did you achieve yesterday?
