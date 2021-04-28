@@ -1,4 +1,4 @@
-
+/* these should be unnecessary now
 
 table tr td {
     border: 5px solid black;
@@ -22,5 +22,107 @@ td {
 
 td div {
     background-color: darkblue;
+}
+*/
+body    {
+    text-align: center;
+}
+
+table tr td {
+    border: 5px solid black;
+}
+
+
+
+#user_input    {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1    {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+
+h4    {
+    font-size: 20px;
+}
+
+.button {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+
+
+}
+
+#start    {
+    width: 100px;
+    height: 100px;
+}
+
+#start    {
+    background: yellow;
+}
+
+
+.green    {
+    background: green;
+    
+}
+
+.red    {
+    background: red;
+ 
+}
+
+.yellow    {
+    background: yellow;
+
+}
+
+.blue    {
+    background: blue;
+
+}
+
+.grey    {
+    background: grey;
+
+}
+
+.magenta    {
+    background:magenta;
+
+}
+
+.salmon    {
+    background: salmon;
+
+}
+
+.orange    {
+    background: orange;
+
+}
+
+.aqua    {
+    background: aqua;
+
+}
+
+.blue    {
+    background: blue;
+
+}
+
+.lightup    {
+    border: solid white 15px;
+    opacity: 1;
 }
 

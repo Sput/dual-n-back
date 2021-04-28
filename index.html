@@ -5,43 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Computer Matching</title>
 </head>
 <body>
-    <div id="instructions">
-        <h1>N Back Test</h1>
-        <p>The squares below will flash one at a time. Your objective is to press the spacebar when a square flashes that also flashed N number of squares in the past.</p>
-    </div>
-    <div id="num_back">
-        <p>How many squares back to remember:</p>
-        <input type="number" id="num_back">
-    </div>
-    <div id="num_btn">
-        <button type="button" id="begin">Begin</button>
-    </div>
-    <div id="score_section">
-        <p id="current_score">0</p>
-    </div>
+    <h1>Keep the pattern</h1>
+    <h2>Your objective is to match the pattern the computer lays out</h2>
     <table>
         <tr>
             <td id="0" class="button red"></td>
             <td id="1" class="button green"></td>
-            <td id="2" class="button blue"></td>
+            <td id="2" class="button yellow"></td>
         </tr>
         <tr>
-            <td id="3" class="button yellow"></td>
-            <td id="4" class="button grey"></td>
-            <td id="5" class="button magenta"></td>
+            <td id="3" class="button grey"></td>
+            <td id="4" class="button magenta"></td>
+            <td id="5" class="button salmon"></td>
         </tr>
         <tr>
-            <td id="6" class="button salmon"></td>
-            <td id="7" class="button orange"></td>
-            <td id="8" class="button aqua"></td>
+            <td id="6" class="button blue"></td>
+            <td id="bottom_center" class="button orange"></td>
+            <td id="bottom_right" class="button aqua"></td>
         </tr>
     </table>
-    <div id="match_btn">
-        <button type="button" id="match_btn">That's a match</button>
+    <div id="center">
+        
+        <h4>Score</h4>
+        <span id="screen">0</span>
+            <div id="user_input">
+                <div>
+                    <h4>Start</h4>
+                    <button id="start"></button>
+                </div>
+            </div>
     </div>
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
