@@ -6,6 +6,11 @@ This game involves the computer laying down a pattern of colored blocks, which t
 
 Once the player presses the start button one square on the grid will light up at random. It is then up to the player to match that pattern. Once the player matches the pattern the computer will then take another turn, adding an additional square to the end of the pattern. This alternating will continue until the player is unable to match the computer's pattern. 
 
+Start by clicking the start button pictured below:
+<img src="start_button.png"
+     alt="Start up screen"
+     style="float: left; margin-right: 10px;" />
+
 ## Start Up Screen:
 <img src="main_screen.png"
      alt="Start up screen"
@@ -17,16 +22,5 @@ When the game initializes two empty arrays are created, one to store the players
 # FUTURE CONSIDERATIONS
 
 Currently the player can click on blocks while it is the computers turn. I believe I can disable this with the following code:
-```document.getElementById("button").disabled = true;
+`document.getElementById("button").disabled = true;`
 
-
-
-
-# PROCESS WORK
-
-## Initial Wireframes:
-Initial Wireframes go here ( images )
-
-## Scratch Work:
-
-Scratch Work goes here
