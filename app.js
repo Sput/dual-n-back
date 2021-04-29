@@ -98,20 +98,28 @@ function compareArrays() {
 
 //when game resets gives an action
 function resetGame() {
-    console.log("reset game")
-    console.log(computer_gives.length);
+    computer_gives = [];
+    current_score();
+    document.getElementById("start").disabled = false;
 }
 
 
 //called when compareArrays doesn't match
 function gameOver() {
+    let modal = document.getElementById("score_modal");
+    let span = document.getElementsByClassName("close")[0];
     console.log("game over")
     final_score = computer_gives.length - 1
     document.getElementById("start").disabled = false;
     computer_gives = [];
-    setTimeout(() => {
+    modal.style.display = "block";
+    span.onclick = function() {
+        modal.style.display = "none";
+        current_score();
+    }
+    /*setTimeout(() => {
         let show_score = confirm("your score was " + final_score)
-    }, 1000);
+    }, 1000); */
 }
 /* COME BACK TO THIS LATER, NOT URGENT TO GET THE GAME RUNNING
 //user cant click while computer is flashing
@@ -151,13 +159,14 @@ function enableReset() {
 //Function to update the game stage (how many blocks have been shown) 
 //right now this is not a function, not sure if I need to make it one, right now it makes sense
 //to just have one line that reads: rounds_left = rounds_left--;
-start
+
 //Update score and game state onuser_score
 function current_score() {
     console.log("current score")
     /*let score = document.getElementById("current_score");
     score.innerHTML = current_score; I think I don't need this anymore*/
     document.getElementById("user_score").innerHTML = computer_gives.length;
+    document.getElementById("modal_score").innerHTML = computer_gives.length;
     return;
 }
 /*
@@ -181,3 +190,4 @@ document.getElementById("begin").onclick = function(){
 
 //when start is clicked game starts
 document.getElementById("start").addEventListener("click", beginGame);
+document.getElementById("reset").addEventListener("click", resetGame);
