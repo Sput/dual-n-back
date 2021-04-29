@@ -26,9 +26,9 @@
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. With help from Paula and Rome I was able to get my project working about mid-day. After that I spent the day trying to get it looking more professional. 
+2. Today I will make my initial deployment, make some final tweaks to the look and feel of the app. After that I should have plenty of time to finalize documentation and prepare the presentation. 
+3. Having some trouble with one CSS feature I can't seem to make work. I'm having trouble making items respond to changing the window size. 
 
 # Thursday
 - [x] What did you achieve yesterday?

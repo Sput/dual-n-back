@@ -11,7 +11,7 @@ function Light_up_new_block(button_gives) {
     buttons[button_gives].classList.add("lightup");
     setTimeout(function()    {
         buttons[button_gives].classList.remove("lightup");
-    }, 500);
+    }, 200);
 }
 
 //div.classList.remove("foo");
@@ -19,6 +19,7 @@ function Light_up_new_block(button_gives) {
 
 function beginGame() {
     console.log("begin game")
+    document.getElementById("start").disabled = true;
     //enableReset();
     //disableStart();
     computer_action();
@@ -105,8 +106,10 @@ function resetGame() {
 //called when compareArrays doesn't match
 function gameOver() {
     console.log("game over")
+    final_score = computer_gives.length - 1
+    document.getElementById("start").disabled = false;
     setTimeout(() => {
-        let show_score = confirm("your score was " + computer_gives.length)
+        let show_score = confirm("your score was " + final_score)
     }, 1000);
 }
 /* COME BACK TO THIS LATER, NOT URGENT TO GET THE GAME RUNNING
