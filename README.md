@@ -7,6 +7,8 @@ This game involves the computer laying down a pattern of colored blocks, which t
 Once the player presses the start button one square on the grid will light up at random. It is then up to the player to match that pattern. Once the player matches the pattern the computer will then take another turn, adding an additional square to the end of the pattern. This alternating will continue until the player is unable to match the computer's pattern. 
 
 Start by clicking the start button pictured below:
+
+
 <img src="start_button.png"
      alt="Start up screen"
      style="float: left; margin-right: 10px;" />
