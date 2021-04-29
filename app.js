@@ -108,6 +108,7 @@ function gameOver() {
     console.log("game over")
     final_score = computer_gives.length - 1
     document.getElementById("start").disabled = false;
+    computer_gives = [];
     setTimeout(() => {
         let show_score = confirm("your score was " + final_score)
     }, 1000);

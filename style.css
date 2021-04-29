@@ -79,6 +79,19 @@ h4    {
     height: 50px;
     margin: 10px;
     border-radius: 12px;
+    font-size: 20px;
+}
+
+#reset    {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+#reset    {
+    background: red;
 }
 
 #start    {
@@ -178,3 +191,12 @@ table tr td{
     }
 }
 
+@media screen and (max-width: 400px) {
+    .button {
+        width: 50px;
+        height: 50px;
+        margin: 2px;
+        
+    
+    }
+}
