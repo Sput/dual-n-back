@@ -46,3 +46,9 @@
 2. RESPONSE
 3. RESPONSE
 
+
+# Additional Questions
+- [x] What HTML, CSS, and or JavaScript skills you learned while building your game?
+- [x] What's one topic you want to spend more practice on?
+1. The most important things I wanted to acheive were to be able to put things on the screen, have the computer react to those items, have the user be able to manipulate them, and have actions occur as a result of those. 
+2. The most important thing for my future that we learned this cycle is APIs. Pulling in data, manipulating data and displaying it. I'd like to learn more about how to do that, perhaps how API data that is displayed can be directed by CSS rules. 
