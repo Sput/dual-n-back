@@ -1,3 +1,19 @@
+document.getElementById("begin").onclick = function(){
+    //Light up a new block
+    //console.log(Math.floor(Math.random()*9));
+    let rounds_left = 20;
+    let num_back = document.getElementById("num_back").value; 
+    console.log("begin button pressed");
+    let new_block = getRandomNumber();
+    computer_gives.push(new_block);
+    userGuess = document.getElementById("match_btn").addEventListener("click", buttonPressed(computer_gives, new_block, num_back))
+    current_score = updateScore(userGuess, current_score);
+    rounds_left = rounds_left--;
+    updauser_score(current_score);
+    Light_up_new_block();
+    console.log(computer_gives)
+}; */
+
 //define variables to get started with
 
 let button = document.querySelector("#start")
@@ -5,7 +21,6 @@ let buttons = document.querySelectorAll(".button")
 let computer_gives = [];
 let user_input = []
 
-//take in the button to be lit up, and light it up, then return it to normal
 function Light_up_new_block(button_gives) {
     console.log("Light up new block")
     
@@ -15,8 +30,9 @@ function Light_up_new_block(button_gives) {
     }, 200);
 }
 
+//div.classList.remove("foo");
+//div.classList.add("anotherclass");
 
-//begin game, called from push of start button
 function beginGame() {
     console.log("begin game")
     document.getElementById("start").disabled = true;
@@ -25,7 +41,6 @@ function beginGame() {
     computer_action();
 }
 
-//computer takes actions on its array
 function play_state_computer_array() {
     //disableClick();
     console.log("play_state_computer array")
@@ -51,6 +66,7 @@ function computer_action() {
 
 
 //user makes a selection 
+//++note to self, update this in HTML with numbers
 function enableClick()    {
     console.log("enable Click")
     document.getElementById("0").addEventListener("click", userInput);
@@ -117,8 +133,48 @@ function gameOver() {
         modal.style.display = "none";
         current_score();
     }
+    /*setTimeout(() => {
+        let show_score = confirm("your score was " + final_score)
+    }, 1000); */
+}
+/* COME BACK TO THIS LATER, NOT URGENT TO GET THE GAME RUNNING
+//user cant click while computer is flashing
+function() {
+    document.getElementById("button").disabled = true;
 }
 
+
+//cant start game once game is started
+function disableStart() {
+    document.getElementById("start").disabled = true;
+}*/
+
+/*
+function enableReset() {
+    document.getElementById("reset").addEventListener("click", resetstartGame);
+}  removed temporarily, add back in if I add the reset button*/ 
+
+//Function to take in button push, should not need this anymore, keeping just in case
+/*function buttonPressed(computer_gives, new_block, num_back) {
+    let correctGuess = 0;
+    if (computer_gives[computer_gives.length-num_back] == new_block){
+        correctGuess = 1;
+    }
+    return correctGuess;
+}*/
+
+//Function to update score data should no longer be necessary, using length of computer_gives[] to get this
+/*function updateScore(correctGuess, current_score) {
+    if (correctGuess){
+        current_score++;
+    }
+    return current_score;
+}*/
+
+
+//Function to update the game stage (how many blocks have been shown) 
+//right now this is not a function, not sure if I need to make it one, right now it makes sense
+//to just have one line that reads: rounds_left = rounds_left--;
 
 //Update score and game state onuser_score
 function current_score() {
